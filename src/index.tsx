@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CssBaseline } from '@mui/material';
+import { DiffProvider } from './hooks/useDiffData';
 
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
-    <App />
+    <DiffProvider>
+      <App />
+    </DiffProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
